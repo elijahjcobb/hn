@@ -27,7 +27,7 @@ export function Row({ id }: RowProps): ReactElement {
 	const dateString = moment(date).fromNow();
 
 	return <Link href={url ?? "https://news.ycombinator.com"} passHref>
-		<a target={'_blank'}>
+		<a className={styles.link} target={'_blank'}>
 			<div className={cn(styles.post, styles.fade)}>
 				<span className={styles.title}>{title}</span>
 				<div className={styles.items}>

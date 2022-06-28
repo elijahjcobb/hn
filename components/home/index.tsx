@@ -6,9 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-const ROW_COUNT = 10;
+const ROW_COUNT = 20;
 const ROW_HEIGHT = 150;
-const ROW_PRELOAD = ROW_COUNT;
+const ROW_PRELOAD = ROW_COUNT * 2;
 
 export function HomePage() {
 

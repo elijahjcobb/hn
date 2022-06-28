@@ -12,6 +12,10 @@
 	animation: fadeIn 300ms ease-in-out forwards;
 }
 
+.link:visited {
+	color: var(--visited);
+}
+
 .post {
 	display: flex;
 	flex-direction: column;

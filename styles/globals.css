@@ -29,6 +29,7 @@ a {
   --font: 'Nunito Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --row: calc(var(--padding) * 18.75);
+  --visited: #999;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +37,7 @@ a {
     --gray: #222;
     --background: var(--black);
     --foreground: var(--white);
+    --visited: #555;
   }
 }
 
