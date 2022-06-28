@@ -1,0 +1,29 @@
+.container {
+	background: var(--primary);
+	padding: var(--padding-l);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.container, .container div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--padding);
+}
+
+.icon, .link {
+	color: var(--foreground);
+}
+
+.icon {
+	width: var(--padding-xl);
+	height: var(--padding-xl);
+}
+
+.link {
+	width: var(--padding-x);
+	height: var(--padding-x);
+}

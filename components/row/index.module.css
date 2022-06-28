@@ -1,0 +1,51 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade {
+	opacity: 0;
+	animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: var(--padding-xl) var(--padding-l);
+	gap: var(--padding-l);
+	height: var(--row);
+	transition: background 125ms ease-in-out;
+	font-weight: lighter;
+}
+
+@media (hover: hover) {
+	.post:hover {
+		background: var(--gray);
+	}
+}
+
+.title {
+	font-weight: normal;
+	font-size: 1.25em;
+	display: block;
+}
+
+.items, .item {
+	display: flex;
+	align-items: center;
+}
+
+.items {
+	gap: var(--padding-l);
+	justify-content: flex-start;
+}
+
+.item {
+	gap: var(--padding-s);
+	justify-content: space-between;
+}

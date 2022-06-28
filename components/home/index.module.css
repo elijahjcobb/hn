@@ -1,0 +1,31 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	max-width: 768px;
+	margin: auto;
+}
+
+.sep {
+	background: var(--gray);
+	height: 2px;
+}
+
+.btn {
+	outline: none;
+	margin: var(--padding-xl) 0;
+	border: none;
+	background: var(--primary);
+	padding: var(--padding);
+	font-weight: bold;
+	border-radius: var(--padding-s);
+	font-family: var(--font);
+	cursor: pointer;
+	transition: 125ms ease-in-out;
+}
+
+@media (hover: hover) {
+	.btn:hover {
+		transform: scale(1.025);
+		box-shadow: 0 0 var(--padding) var(--primary);
+	}
+}
