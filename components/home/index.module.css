@@ -5,6 +5,10 @@
 	margin: auto;
 }
 
+.page {
+	background: var(--background);
+}
+
 .sep {
 	background: var(--gray);
 	height: 2px;

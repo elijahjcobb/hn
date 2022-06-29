@@ -7,6 +7,12 @@
 	z-index: 1;
 }
 
+@media (max-width: 420px) {
+	.container {
+		padding-top: 72px;
+	}
+}
+
 .container, .container div {
 	display: flex;
 	justify-content: space-between;

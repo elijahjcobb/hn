@@ -16,6 +16,10 @@
 	color: var(--visited);
 }
 
+.link:visited svg path {
+	fill: var(--visited);
+}
+
 .post {
 	display: flex;
 	flex-direction: column;

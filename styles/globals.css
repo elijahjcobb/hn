@@ -43,7 +43,7 @@ a {
 
 body {
   font-family: var(--font);
-  background: var(--background);
+  background: var(--primary);
   color: var(--foreground);
   font-size: var(--padding-l);
 }
