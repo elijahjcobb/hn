@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="shortcut icon" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/icon-256x256.png"></link>
       <meta name="apple-mobile-web-app-capable" content="yes" />
-
+      <script async src="https://cdn.splitbee.io/sb.js" />
     </Head>
     <Component {...pageProps} />
   </>
