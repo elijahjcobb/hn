@@ -1,35 +1,37 @@
 .container {
-	background: var(--primary);
-	padding: var(--padding-l);
-	position: sticky;
-	top: 0;
-	width: 100%;
-	z-index: 1;
+  background: var(--primary);
+  padding: var(--padding-l);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 @media (max-width: 420px) {
-	.container {
-		padding-top: 72px;
-	}
+  .container {
+    padding-top: 72px;
+  }
 }
 
-.container, .container div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: var(--padding);
+.container,
+.container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--padding);
 }
 
-.icon, .link {
-	color: var(--foreground);
+.icon,
+.link {
+  color: var(--foreground);
 }
 
 .icon {
-	width: var(--padding-xl);
-	height: var(--padding-xl);
+  width: var(--padding-xl);
+  height: var(--padding-xl);
 }
 
 .link {
-	width: var(--padding-x);
-	height: var(--padding-x);
+  width: var(--padding-x);
+  height: var(--padding-x);
 }

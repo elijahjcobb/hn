@@ -1,50 +1,36 @@
 import styles from "./index.module.css";
 import { FaCalendar, FaComment, FaTrophy } from "react-icons/fa";
-import type { ReactElement } from "react";
 import moment from "moment";
 import Link from "next/link";
-import { Ghost } from "./ghost";
 import cn from "classnames";
-import { useFetchPost } from "../fetcher";
+import { fetchPost } from "../fetcher";
 
-export interface RowProps {
-	id: number;
-}
+export async function Row({ id }: { id: number }): Promise<JSX.Element> {
 
-export function Row({ id }: RowProps): ReactElement {
+	const post = await fetchPost(id);
 
-	const { data, error } = useFetchPost(id)
-
-	if (error) {
-		console.error(error);
-		return <p>Error!</p>
-	}
-
-	if (!data) return <Ghost />
-	const { title, time, score, descendants, url } = data;
+	const { title, time, score, descendants, url } = post;
 
 	const date = new Date(time * 1000);
 	const dateString = moment(date).fromNow();
 
-	return <Link href={url ?? "https://news.ycombinator.com"} passHref>
-		<a className={styles.link} target={'_blank'}>
-			<div className={cn(styles.post, styles.fade)}>
-				<span className={styles.title}>{title}</span>
-				<div className={styles.items}>
-					<div className={styles.item}>
-						<FaTrophy />
-						<span>{score}</span>
-					</div>
-					<div className={styles.item}>
-						<FaComment />
-						<span>{descendants}</span>
-					</div>
-					<div className={styles.item}>
-						<FaCalendar />
-						<span>{dateString}</span>
-					</div>
+	return <Link href={url ?? "https://news.ycombinator.com"} target="_blank" className={styles.link}>
+		<div className={styles.post}>
+			<span className={styles.title}>{title}</span>
+			<div className={styles.items}>
+				<div className={styles.item}>
+					<FaTrophy />
+					<span>{score}</span>
+				</div>
+				<div className={styles.item}>
+					<FaComment />
+					<span>{descendants}</span>
+				</div>
+				<div className={styles.item}>
+					<FaCalendar />
+					<span>{dateString}</span>
 				</div>
 			</div>
-		</a>
+		</div>
 	</Link>
 }

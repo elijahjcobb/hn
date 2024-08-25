@@ -8,10 +8,8 @@ export function NavBar() {
 			<FaHackerNews className={styles.icon} />
 			<h1>Hacker News</h1>
 		</div>
-		<Link href='https://elijahcobb.com' passHref>
-			<a target='_blank'>
-				<FaExternalLinkAlt className={styles.link} />
-			</a>
+		<Link href='https://elijahcobb.com' target="_blank">
+			<FaExternalLinkAlt className={styles.link} />
 		</Link>
 	</nav>
 }
